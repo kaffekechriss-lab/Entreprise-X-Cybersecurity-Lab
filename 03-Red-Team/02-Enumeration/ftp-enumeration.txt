@@ -1,0 +1,21 @@
+# Nmap 7.95 scan initiated Fri Nov  6 06:48:10 2026 as: /usr/lib/nmap/nmap -n -Pn -p21 --script ftp-anon,ftp-syst -oN ftp-enumeration.txt 192.168.70.21
+Nmap scan report for 192.168.70.21
+Host is up (0.065s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.2.3
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+
+# Nmap done at Fri Nov  6 06:48:11 2026 -- 1 IP address (1 host up) scanned in 0.88 seconds
