@@ -1,23 +1,21 @@
-﻿# Entreprise X â€” Network Engineering & Cybersecurity Lab
+# Entreprise X - Network Engineering & Cybersecurity Lab
 
 ## Project Overview
+Entreprise X is a practical enterprise network engineering and cybersecurity laboratory built with GNS3, VirtualBox, Cisco IOS, pfSense, Kali Linux, Metasploitable 2 and Suricata.
 
-Entreprise X is a practical enterprise network and cybersecurity laboratory built using GNS3, VirtualBox, Cisco IOS, pfSense, Kali Linux and Metasploitable 2.
-
-The project aims to design, configure, secure and audit a segmented enterprise network in a controlled virtual environment.
+The project demonstrates enterprise network design, routing, segmentation, security assessment, controlled exploitation, intrusion detection and network traffic analysis.
 
 ## Objectives
-
-- Design and deploy an enterprise network architecture.
-- Configure VLANs and inter-VLAN routing.
-- Implement OSPF dynamic routing.
-- Deploy pfSense as a firewall and gateway.
-- Perform network reconnaissance and vulnerability assessment.
-- Monitor suspicious traffic using Suricata.
-- Document security findings and remediation strategies.
+- Design and deploy a segmented enterprise network.
+- Configure VLANs and OSPF routing.
+- Deploy pfSense as a firewall and network gateway.
+- Perform reconnaissance, service enumeration and vulnerability assessment.
+- Conduct controlled exploitation in an isolated laboratory.
+- Deploy Suricata for intrusion detection.
+- Analyze network traffic using tcpdump and Wireshark.
+- Document findings, risks and security recommendations.
 
 ## Laboratory Environment
-
 | Component | Technology |
 |---|---|
 | Network simulation | GNS3 |
@@ -26,35 +24,37 @@ The project aims to design, configure, secure and audit a segmented enterprise n
 | Firewall | pfSense |
 | Red Team | Kali Linux |
 | Vulnerable target | Metasploitable 2 |
-| Blue Team | Suricata |
-| Network analysis | Nmap / Wireshark |
+| Intrusion detection | Suricata |
+| Network analysis | Nmap, tcpdump, Wireshark |
 
 ## Project Progress
-
 - [x] Enterprise network architecture deployed.
-- [x] Cisco routing and OSPF configured.
-- [x] Network segmentation implemented.
-- [x] VLAN 70 integrated for vulnerable servers.
+- [x] VLAN segmentation and OSPF routing configured.
+- [x] pfSense gateway and firewall environment configured.
 - [x] Kali-to-Metasploitable connectivity established.
-- [x] Initial Nmap reconnaissance completed.
-- [ ] Service enumeration and vulnerability assessment.
-- [ ] Controlled exploitation scenarios.
-- [ ] IDS/IPS monitoring and detection.
-- [ ] Security assessment reports.
+- [x] Red Team reconnaissance and service enumeration completed.
+- [x] Vulnerability assessment completed.
+- [x] Controlled exploitation of vsftpd and Samba completed; root access obtained in the isolated lab.
+- [x] Suricata IDS configured and Nmap detection validated.
+- [x] ICMP traffic captured and analyzed using tcpdump and Wireshark.
+- [x] Security reports and technical evidence documented.
+- [ ] Suricata IPS blocking validation.
 
 ## Repository Structure
+- 01-Architecture/ - Network topology and IP addressing.
+- 02-Network-Infrastructure/ - Routing, VLANs and firewall infrastructure.
+- 03-Red-Team/ - Reconnaissance, enumeration, vulnerability analysis and exploitation.
+- 04-Blue-Team/ - Firewall, Suricata and traffic analysis.
+- 05-Security-Reports/ - Security assessment and packet capture.
+- 06-Evidence/ - Evidence indexes for screenshots and test results.
 
-- `01-Architecture/` â€” Network topology and IP addressing.
-- `02-Network-Infrastructure/` â€” Routing, VLANs and firewall configurations.
-- `03-Red-Team/` â€” Reconnaissance and security assessments.
-- `04-Blue-Team/` â€” Detection, monitoring and defense.
-- `05-Security-Reports/` â€” Technical security reports.
-- `06-Evidence/` â€” Screenshots and test results.
+## Security Assessment
+The laboratory identified critical vulnerabilities in the intentionally vulnerable Metasploitable 2 target, including successful exploitation of vsftpd 2.3.4 and Samba 3.0.20.
+
+Suricata IDS detection was validated using Nmap traffic. IPS blocking has not yet been tested.
 
 ## Security Disclaimer
-
-All security assessments and penetration-testing activities are conducted exclusively within this authorized and isolated laboratory environment.
+All testing is conducted exclusively within an authorized, isolated virtual laboratory. No production systems are targeted.
 
 ## Project Status
-
-**In Progress** â€” This repository is continuously updated as new laboratory exercises are completed and documented.
+**Blue Team IDS and traffic analysis completed. IPS validation remains pending.**
